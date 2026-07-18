@@ -12,14 +12,14 @@ import { Check, Lock, CreditCard, Wallet, Banknote, Building2 } from "lucide-rea
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => ({ meta: [{ title: "Checkout — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Checkout - Aurelane" }] }),
   component: CheckoutPage,
 });
 
 const steps = ["Information", "Delivery", "Shipping", "Payment", "Review"];
 
 function CheckoutPage() {
-  const { cartDetailed, subtotal, clearCart } = useStore();
+  const { cartDetailed, subtotal, clearCart, addOrder } = useStore();
   const [step, setStep] = useState(0);
   const [shipping, setShipping] = useState("standard");
   const [payment, setPayment] = useState("card");
@@ -33,6 +33,16 @@ function CheckoutPage() {
   const back = () => setStep((s) => Math.max(0, s - 1));
 
   const placeOrder = () => {
+    const order = {
+      id: String(Date.now()),
+      items: cartDetailed,
+      total,
+      totalFormatted: formatPrice(total),
+      customerName: "Guest",
+      createdAt: new Date().toISOString(),
+    };
+
+    addOrder(order);
     setPlaced(true);
     clearCart();
     toast.success("Order placed successfully");
@@ -81,7 +91,7 @@ function CheckoutPage() {
             <section className="space-y-4 rounded-2xl border border-border bg-card p-6">
               <div>
                 <h2 className="font-display text-2xl">Your information</h2>
-                <p className="text-sm text-muted-foreground">Guest checkout — <Link to="/auth" className="underline">sign in</Link> for a faster experience.</p>
+                <p className="text-sm text-muted-foreground">Guest checkout - <Link to="/auth" className="underline">sign in</Link> for a faster experience.</p>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Field label="Email" type="email" required />
@@ -126,7 +136,7 @@ function CheckoutPage() {
           {step === 3 && (
             <section className="space-y-4 rounded-2xl border border-border bg-card p-6">
               <div className="flex items-center gap-2"><Lock className="h-4 w-4 text-accent" /><h2 className="font-display text-2xl">Payment method</h2></div>
-              <p className="text-xs text-muted-foreground">Demo checkout — no live payment is processed. Your card details are never stored.</p>
+              <p className="text-xs text-muted-foreground">Demo checkout - no live payment is processed. Your card details are never stored.</p>
               <RadioGroup value={payment} onValueChange={setPayment} className="space-y-3">
                 <RadioOption id="card" value="card" title="Credit or debit card" desc="Visa · Mastercard · Amex" icon={<CreditCard className="h-4 w-4" />} />
                 <RadioOption id="wallet" value="wallet" title="Digital wallet" desc="Apple Pay · Google Pay" icon={<Wallet className="h-4 w-4" />} />

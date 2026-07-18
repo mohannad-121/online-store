@@ -7,7 +7,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "Sign in — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Sign in - Aurelane" }] }),
   component: AuthPage,
 });
 
@@ -37,7 +37,7 @@ function AuthPage() {
             </form>
           </TabsContent>
           <TabsContent value="signup" className="pt-6">
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); toast.success("Account created — check your email"); }}>
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); toast.success("Account created - check your email"); }}>
               <div className="grid grid-cols-2 gap-4">
                 <div><Label className="mb-2 block">First name</Label><Input required /></div>
                 <div><Label className="mb-2 block">Last name</Label><Input required /></div>

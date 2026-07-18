@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Heart, Search, ShoppingBag, User, Menu, X, Globe } from "lucide-react";
+import { Heart, Search, ShoppingBag, User, Menu, Globe } from "lucide-react";
 import { useState } from "react";
 import { useStore } from "@/lib/store";
+import { useLanguage } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -10,17 +11,6 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
-
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/shop", label: "Shop" },
-  { to: "/category/hydration", label: "Hydration" },
-  { to: "/category/brightening", label: "Brightening" },
-  { to: "/category/repair", label: "Repair" },
-  { to: "/skin-guide", label: "Skin Guide" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-];
 
 export function AnnouncementBar() {
   return (
@@ -37,6 +27,18 @@ export function AnnouncementBar() {
 export function Header() {
   const { cartCount, wishlistCount } = useStore();
   const [searchOpen, setSearchOpen] = useState(false);
+  const { language, setLanguage, t, isRtl } = useLanguage();
+
+  const nav = [
+    { to: "/", label: t("home") },
+    { to: "/shop", label: t("shop") },
+    { to: "/category/hydration", label: t("hydration") },
+    { to: "/category/brightening", label: t("brightening") },
+    { to: "/category/repair", label: t("repair") },
+    { to: "/skin-guide", label: t("skinGuide") },
+    { to: "/about", label: t("about") },
+    { to: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b border-border/60">
@@ -90,9 +92,16 @@ export function Header() {
           <Button variant="ghost" size="icon" aria-label="Search" onClick={() => setSearchOpen((s) => !s)}>
             <Search className="h-[18px] w-[18px]" />
           </Button>
-          <Button variant="ghost" size="icon" aria-label="Language" className="hidden md:inline-flex">
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label={t("language")}
+            onClick={() => setLanguage(language === "en" ? "ar" : "en")}
+            className="hidden md:inline-flex"
+          >
             <Globe className="h-[18px] w-[18px]" />
           </Button>
+          <span className="hidden md:inline-flex text-sm uppercase text-muted-foreground">{language}</span>
           <Button variant="ghost" size="icon" aria-label="Account" asChild>
             <Link to="/account"><User className="h-[18px] w-[18px]" /></Link>
           </Button>

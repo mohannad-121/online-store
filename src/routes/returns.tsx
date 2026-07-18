@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/returns")({
-  head: () => ({ meta: [{ title: "Returns & refunds — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Returns & refunds - Aurelane" }] }),
   component: () => (
     <div className="container-editorial py-16 max-w-3xl">
       <p className="text-eyebrow">Support</p>

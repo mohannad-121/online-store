@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Check, Package, Truck, Home, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/track-order")({
-  head: () => ({ meta: [{ title: "Track order — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Track order - Aurelane" }] }),
   component: TrackOrderPage,
 });
 

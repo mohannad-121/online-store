@@ -8,7 +8,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/cart")({
-  head: () => ({ meta: [{ title: "Cart — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Cart - Aurelane" }] }),
   component: CartPage,
 });
 
@@ -73,7 +73,7 @@ function CartPage() {
           <div className="mt-6 space-y-3 text-sm">
             <Row label="Subtotal" value={formatPrice(subtotal)} />
             {discount > 0 && <Row label="Discount" value={`-${formatPrice(discount)}`} />}
-            <Row label={`Shipping${shipping === 0 ? " (free)" : ""}`} value={shipping === 0 ? "—" : formatPrice(shipping)} />
+            <Row label={`Shipping${shipping === 0 ? " (free)" : ""}`} value={shipping === 0 ? "-" : formatPrice(shipping)} />
             <Row label="Estimated tax" value={formatPrice(tax)} />
             <div className="border-t border-border pt-3 flex justify-between font-medium text-base">
               <span>Total</span><span>{formatPrice(total)}</span>

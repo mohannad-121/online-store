@@ -6,7 +6,7 @@ export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {
     const c = findCategory(params.slug);
     return { meta: [
-      { title: c ? `${c.name} — Aurelane` : "Category — Aurelane" },
+      { title: c ? `${c.name} - Aurelane` : "Category - Aurelane" },
       { name: "description", content: c?.description ?? "Aurelane skincare category" },
     ]};
   },
@@ -44,7 +44,7 @@ function CategoryPage() {
           <p className="text-eyebrow">Skincare tips</p>
           <h2 className="mt-3 font-display text-3xl">Get the most from your {category.name.toLowerCase()} ritual</h2>
           <ul className="mt-6 grid md:grid-cols-3 gap-6 text-sm">
-            <li><strong className="block font-display text-lg mb-1">Layer thinnest first</strong><span className="text-muted-foreground">Serums before creams — always.</span></li>
+            <li><strong className="block font-display text-lg mb-1">Layer thinnest first</strong><span className="text-muted-foreground">Serums before creams - always.</span></li>
             <li><strong className="block font-display text-lg mb-1">Give actives time</strong><span className="text-muted-foreground">Wait 30 seconds between layers.</span></li>
             <li><strong className="block font-display text-lg mb-1">Protect in the morning</strong><span className="text-muted-foreground">Finish with SPF for best results.</span></li>
           </ul>

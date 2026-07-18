@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { Info } from "lucide-react";
 
 export const Route = createFileRoute("/skin-guide")({
-  head: () => ({ meta: [{ title: "Skin guide — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Skin guide - Aurelane" }] }),
   component: SkinGuidePage,
 });
 
@@ -15,7 +15,7 @@ const skinTypes = [
   { t: "Dry", d: "Feels tight, may look dull or flaky, especially after cleansing." },
   { t: "Oily", d: "Shows shine within a few hours, prone to congestion and enlarged pores." },
   { t: "Combination", d: "Oil in the T-zone, drier on cheeks. The most common skin type." },
-  { t: "Sensitive", d: "Reacts easily — redness, stinging, discomfort with new products." },
+  { t: "Sensitive", d: "Reacts easily - redness, stinging, discomfort with new products." },
   { t: "Normal", d: "Balanced, rarely reactive, few visible concerns." },
 ];
 

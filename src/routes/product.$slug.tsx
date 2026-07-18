@@ -14,7 +14,7 @@ export const Route = createFileRoute("/product/$slug")({
   head: ({ params }) => {
     const p = findProduct(params.slug);
     return { meta: [
-      { title: p ? `${p.name} — Aurelane` : "Product — Aurelane" },
+      { title: p ? `${p.name} - Aurelane` : "Product - Aurelane" },
       { name: "description", content: p?.shortBenefit ?? "Aurelane skincare product" },
       { property: "og:image", content: p?.image },
     ]};
@@ -121,7 +121,7 @@ function ProductPage() {
                 <p className="text-eyebrow mb-2">Key ingredients</p>
                 <ul className="space-y-2">
                   {product.keyIngredients.map((k) => (
-                    <li key={k.name}><strong>{k.name}</strong> — <span className="text-muted-foreground">{k.role}</span></li>
+                    <li key={k.name}><strong>{k.name}</strong> - <span className="text-muted-foreground">{k.role}</span></li>
                   ))}
                 </ul>
               </div>
@@ -180,9 +180,9 @@ function ProductPage() {
         <p className="text-eyebrow">Questions & answers</p>
         <h2 className="mt-2 font-display text-3xl">Ask our skincare team</h2>
         <Accordion type="single" collapsible className="mt-6">
-          <AccordionItem value="q1"><AccordionTrigger>Can I use this with retinol?</AccordionTrigger><AccordionContent className="text-muted-foreground">Yes — layer this cream after your retinol to help buffer and hydrate.</AccordionContent></AccordionItem>
+          <AccordionItem value="q1"><AccordionTrigger>Can I use this with retinol?</AccordionTrigger><AccordionContent className="text-muted-foreground">Yes - layer this cream after your retinol to help buffer and hydrate.</AccordionContent></AccordionItem>
           <AccordionItem value="q2"><AccordionTrigger>Is it safe during pregnancy?</AccordionTrigger><AccordionContent className="text-muted-foreground">The formula avoids common ingredients of concern, but always consult your doctor.</AccordionContent></AccordionItem>
-          <AccordionItem value="q3"><AccordionTrigger>Is the packaging recyclable?</AccordionTrigger><AccordionContent className="text-muted-foreground">Yes — the glass jar and outer carton are fully recyclable.</AccordionContent></AccordionItem>
+          <AccordionItem value="q3"><AccordionTrigger>Is the packaging recyclable?</AccordionTrigger><AccordionContent className="text-muted-foreground">Yes - the glass jar and outer carton are fully recyclable.</AccordionContent></AccordionItem>
         </Accordion>
       </section>
 

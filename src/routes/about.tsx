@@ -4,7 +4,7 @@ import featured from "@/assets/featured-banner.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({ meta: [
-    { title: "About us — Aurelane" },
+    { title: "About us - Aurelane" },
     { name: "description", content: "Our story, mission, and ingredient philosophy." },
   ]}),
   component: AboutPage,
@@ -16,11 +16,11 @@ function AboutPage() {
       <section className="container-editorial py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-eyebrow">Our story</p>
-          <h1 className="mt-3 font-display text-5xl md:text-6xl leading-tight">Skincare, considered — from ingredient to ritual.</h1>
+          <h1 className="mt-3 font-display text-5xl md:text-6xl leading-tight">Skincare, considered - from ingredient to ritual.</h1>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Aurelane began with a simple idea: skincare should feel like a moment of care, not a chore.
             We work closely with dermatologists and formulators to develop products that are gentle,
-            effective, and quietly beautiful — from the first drop to the last.
+            effective, and quietly beautiful - from the first drop to the last.
           </p>
         </div>
         <img src={lifestyle} alt="" className="rounded-2xl aspect-[4/5] object-cover" />
@@ -29,7 +29,7 @@ function AboutPage() {
       <section className="bg-secondary/60 py-20">
         <div className="container-editorial grid md:grid-cols-3 gap-8">
           {[
-            { t: "Mission", d: "To make thoughtful skincare accessible — with formulas we'd use on our own skin, every day." },
+            { t: "Mission", d: "To make thoughtful skincare accessible - with formulas we'd use on our own skin, every day." },
             { t: "Vision", d: "A future where every beauty product is honest about what it does, how it's made, and who it's for." },
             { t: "Values", d: "Kindness in every formula, transparency in every claim, and respect for the planet and its people." },
           ].map((v) => (
@@ -47,7 +47,7 @@ function AboutPage() {
           <p className="text-eyebrow">Ingredient philosophy</p>
           <h2 className="mt-3 font-display text-4xl">Botanical actives, backed by science.</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            We choose ingredients for what they do — not what they sound like. Our formulas pair
+            We choose ingredients for what they do - not what they sound like. Our formulas pair
             time-tested botanicals with clinically-proven actives at levels that actually work.
             Nothing on our label is filler.
           </p>

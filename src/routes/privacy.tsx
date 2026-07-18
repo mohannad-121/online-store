@@ -19,10 +19,10 @@ function LegalPage({ title, body }: { title: string; body: { h: string; p: strin
 }
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({ meta: [{ title: "Privacy policy — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Privacy policy - Aurelane" }] }),
   component: () => (
     <LegalPage title="Privacy policy" body={[
-      { h: "What we collect", p: "We collect only what we need to fulfill your order and improve your experience — name, contact details, shipping address, and browsing behavior on our site." },
+      { h: "What we collect", p: "We collect only what we need to fulfill your order and improve your experience - name, contact details, shipping address, and browsing behavior on our site." },
       { h: "How we use it", p: "To process orders, provide customer support, communicate offers when you opt in, and improve our products and site." },
       { h: "Your rights", p: "You may request access, correction, or deletion of your data at any time by writing to privacy@aurelane.com." },
       { h: "Third parties", p: "We share data only with vetted providers (payment, shipping, analytics) under contract, never for sale." },

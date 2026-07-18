@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/cookies")({
-  head: () => ({ meta: [{ title: "Cookie policy — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Cookie policy - Aurelane" }] }),
   component: () => (
     <div className="container-editorial py-16 max-w-3xl">
       <p className="text-eyebrow">Legal</p>

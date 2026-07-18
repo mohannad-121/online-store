@@ -17,9 +17,9 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aurelane — Considered skincare for real skin" },
+      { title: "Aurelane - Considered skincare for real skin" },
       { name: "description", content: "Dermatologist-developed creams, serums and rituals for hydration, brightening, and sensitive skin." },
-      { property: "og:title", content: "Aurelane — Considered skincare rituals" },
+      { property: "og:title", content: "Aurelane - Considered skincare rituals" },
       { property: "og:description", content: "Dermatologist-developed creams, serums and rituals." },
     ],
   }),
@@ -41,7 +41,7 @@ function HomePage() {
               Skincare that feels<br/> like a quiet ritual.
             </h1>
             <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Considered formulas developed with dermatologists — for hydration that lasts,
+              Considered formulas developed with dermatologists - for hydration that lasts,
               radiance you can see, and comfort your skin will trust.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -74,8 +74,8 @@ function HomePage() {
               <div className="flex items-center gap-2 text-accent">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-current" />)}
               </div>
-              <p className="mt-2 text-sm leading-snug">"My skin feels calm and cared for — every single morning."</p>
-              <p className="mt-2 text-xs text-muted-foreground">— Amelia, verified customer</p>
+              <p className="mt-2 text-sm leading-snug">"My skin feels calm and cared for - every single morning."</p>
+              <p className="mt-2 text-xs text-muted-foreground">- Amelia, verified customer</p>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ function HomePage() {
             <h2 className="mt-3 font-display text-4xl md:text-5xl leading-tight">Formulated with intent. Made to last.</h2>
             <p className="mt-5 text-muted-foreground max-w-lg leading-relaxed">
               We work with dermatologists and independent labs to develop products that respect
-              your skin — and your time. No overpromises, no unnecessary steps.
+              your skin - and your time. No overpromises, no unnecessary steps.
             </p>
             <ul className="mt-8 space-y-4">
               {[
@@ -202,7 +202,7 @@ function HomePage() {
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-eyebrow">A simple ritual</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl">Three steps, morning & night</h2>
-          <p className="mt-4 text-muted-foreground">Everything your skin needs — nothing it doesn't.</p>
+          <p className="mt-4 text-muted-foreground">Everything your skin needs - nothing it doesn't.</p>
         </div>
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
@@ -258,7 +258,7 @@ function HomePage() {
             <h2 className="mt-3 font-display text-4xl md:text-5xl">Visible change, gently.</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               In an 8-week independent user trial, participants using the Silk Veil ritual reported
-              smoother texture and improved comfort. Results are illustrative — every skin is different.
+              smoother texture and improved comfort. Results are illustrative - every skin is different.
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4">
               {[

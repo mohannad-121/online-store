@@ -13,7 +13,7 @@ import { SlidersHorizontal, Search } from "lucide-react";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop — Aurelane" },
+      { title: "Shop - Aurelane" },
       { name: "description", content: "Browse the full Aurelane range: creams, serums, and rituals for every skin type." },
     ],
   }),

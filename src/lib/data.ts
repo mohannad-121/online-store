@@ -66,7 +66,7 @@ export const categories: Category[] = [
     name: "Repair & Sensitive",
     tagline: "Calm, restore, soothe",
     description:
-      "Gentle, fragrance-considered formulas developed for reactive skin — supporting recovery and comfort.",
+      "Gentle, fragrance-considered formulas developed for reactive skin - supporting recovery and comfort.",
     image: catRepair,
   },
 ];
@@ -229,7 +229,7 @@ export const skinConcerns: SkinConcern[] = ["Dryness", "Acne", "Dark spots", "Fi
 
 export const testimonials = [
   { name: "Amelia R.", location: "London", quote: "My skin has never felt this comfortable. The Silk Veil is the softest cream I've ever used.", rating: 5 },
-  { name: "Noor K.", location: "Dubai", quote: "The Golden Hour serum genuinely brightened my complexion in three weeks — no irritation at all.", rating: 5 },
+  { name: "Noor K.", location: "Dubai", quote: "The Golden Hour serum genuinely brightened my complexion in three weeks - no irritation at all.", rating: 5 },
   { name: "Priya S.", location: "Toronto", quote: "As someone with reactive skin, the Calm Cushion is a rare product I actually trust.", rating: 5 },
   { name: "Sofia M.", location: "Milan", quote: "Elegant packaging, beautiful textures, and results I can see. It feels like a small ritual every night.", rating: 5 },
 ];

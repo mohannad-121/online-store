@@ -6,7 +6,7 @@ import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/wishlist")({
-  head: () => ({ meta: [{ title: "Wishlist — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Wishlist - Aurelane" }] }),
   component: WishlistPage,
 });
 

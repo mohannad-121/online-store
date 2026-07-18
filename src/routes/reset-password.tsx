@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/reset-password")({
-  head: () => ({ meta: [{ title: "Set new password — Aurelane" }] }),
+  head: () => ({ meta: [{ title: "Set new password - Aurelane" }] }),
   component: () => (
     <div className="container-editorial py-16 max-w-md">
       <h1 className="font-display text-4xl">Set a new password</h1>
